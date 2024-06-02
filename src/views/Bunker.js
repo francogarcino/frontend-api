@@ -22,7 +22,7 @@ export default function Bunker() {
                 })
             } else { console.log("jeje") }
         }
-    }, [])
+    }, [uris])
 
     return (
         <div>

@@ -1,10 +1,13 @@
 import axios from "axios";
 
-const sv = "https://express-api-franco-garcinos-projects.vercel.app"
+const sv = "https://express-api-franco-garcinos-projects.vercel.app";
 
-const def = () => axios.get(`${sv}/`)
+const def = () => axios.get(`${sv}/`);
 const androids = () => axios.get(`${sv}/all`);
 
-export default {
-    def, androids
-}
+const api = {
+    def,
+    androids
+};
+
+export default api;
