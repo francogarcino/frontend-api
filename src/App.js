@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Home from "./resources/Home";
-import EnvTest from "./resources/EnvTest";
+import Home from "./views/Home";
+import Bunker from "./views/Bunker";
 
 function App() {
     return (
@@ -8,7 +8,7 @@ function App() {
             <BrowserRouter>
                 <Routes>
                     <Route exact path="/" element={< Home />}/>
-                    <Route exact path="*" element={< EnvTest />}/>
+                    <Route exact path="*" element={< Bunker />}/>
                 </Routes>
             </BrowserRouter>
         </div>

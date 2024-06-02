@@ -1,15 +1,15 @@
 import axios from "axios";
 import {useEffect, useState} from "react";
 
-export default function EnvTest() {
+export default function Bunker() {
     let uris = [process.env.REACT_APP_URI_PANCHO || "",
         process.env.REACT_APP_URI_ACIDC || "",
-        process.env.REACT_APP_URI_ACIDC || "",
-        process.env.REACT_APP_URI_ACIDC || "",
-        process.env.REACT_APP_URI_ACIDC || "",
-        process.env.REACT_APP_URI_ACIDC || "",
-        process.env.REACT_APP_URI_ACIDC || "",
-        process.env.REACT_APP_URI_ACIDC || ""
+        process.env.REACT_APP_URI_JYQ || "",
+        process.env.REACT_APP_URI_BASE || "",
+        process.env.REACT_APP_URI_TECH || "",
+        process.env.REACT_APP_URI_TEST || "",
+        process.env.REACT_APP_URI_MARIA || "",
+        process.env.REACT_APP_URI_ESTRA || ""
     ]
 
     const [docs, setDocs] = useState([{serial_name:"Mechamaru"}]);
