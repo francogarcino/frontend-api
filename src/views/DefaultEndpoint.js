@@ -10,7 +10,7 @@ export default function DefaultEndpoint() {
 
     return (
         <div className="centered-page">
-            <p className="text title underlined"> Connected with e[P]ers </p>
+            <p className="text title underlined"> Conectado a e[P]ers </p>
             <div>
                 <button className="home-btn" onClick={goToLore}> Situacion actual </button>
             </div>
