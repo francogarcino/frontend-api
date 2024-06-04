@@ -1,8 +1,13 @@
-import axios from "axios";
 import {useEffect, useState} from "react";
+import api from "../api/api";
+import "../styles/styles.scss"
+import size from "../utils/functions";
 
 export default function Bunker() {
-    let uris = [process.env.REACT_APP_URI_PANCHO || "",
+    size()
+
+    let uris = [
+        process.env.REACT_APP_URI_PANCHO || "",
         process.env.REACT_APP_URI_ACIDC || "",
         process.env.REACT_APP_URI_JYQ || "",
         process.env.REACT_APP_URI_BASE || "",
@@ -12,25 +17,29 @@ export default function Bunker() {
         process.env.REACT_APP_URI_ESTRA || ""
     ]
 
-    const [docs, setDocs] = useState([{serial_name:"Mechamaru"}]);
+    const [docs, setDocs] = useState([]);
 
     useEffect(() => {
         for (let uri of uris) {
             if (uri) {
-                axios.get(`${uri}/androides`).then((response) => {
+                api.androids(uri).then((response) => {
                     setDocs([...docs, ...response.data])
-                })
-            } else { console.log("jeje") }
+                }).catch(e => console.log(`El terminal ${uri} no responde...`));
+            }
         }
-    }, [uris])
+    }, [])
 
     return (
-        <div>
-            {docs.map((doc, index) => (
-                <div key={index}>
-                    {doc.serial_name}
-                </div>
-            ))}
+        <div className="page" >
+            <div className="text title underlined" > 🧠 Conciencias registradas </div>
+            <div className="left-space droids-container">
+                {docs.map((doc, index) => (
+                    <div key={index} className="item">
+                        <p className="text"> {doc.serial_name} </p>
+                        <p className="text"> {doc.request_timestamp} </p>
+                    </div>
+                ))}
+            </div>
         </div>
     );
 }
