@@ -1,4 +1,5 @@
 import size from "../utils/functions";
+import "../styles/styles.scss"
 
 export default function Enunciado() {
     size()
@@ -6,8 +7,10 @@ export default function Enunciado() {
     return(
         <div className="page">
             <p className="text title underlined"> 🚀 TP 6 | Un exilio inmin[E]nte </p>
-            <div className="text left-space">
-                Narración
+            <div className="margined">
+                <div className="text">
+                    Narración
+                </div>
             </div>
         </div>
     )

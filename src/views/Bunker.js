@@ -1,6 +1,5 @@
 import {useEffect, useState} from "react";
 import api from "../api/api";
-import "../styles/styles.scss"
 import size from "../utils/functions";
 
 export default function Bunker() {
@@ -32,7 +31,7 @@ export default function Bunker() {
     return (
         <div className="page" >
             <div className="text title underlined" > 🧠 Conciencias registradas </div>
-            <div className="left-space droids-container">
+            <div className="margined droids-container">
                 {docs.map((doc, index) => (
                     <div key={index} className="item">
                         <p className="text"> {doc.serial_name} </p>
