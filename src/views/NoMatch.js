@@ -6,7 +6,7 @@ export default function NoMatch() {
 
     return (
         <div className="centered-page">
-            <p className="text title underlined"> 🔧 Unknown path </p>
+            <p className="text title underlined"> 🔧 ¿Perdido...? </p>
             <div>
                 <p className="text" >Ups... Parece que la conexión con el bunker no funciona</p>
                 <p className="text" >Quizas estan atacando nuestra base</p>
