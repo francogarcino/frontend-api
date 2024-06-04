@@ -1,4 +1,4 @@
-import size from "../utils/functions"
+import size from "../utils/window-size"
 import "../styles/styles.scss"
 import {useNavigate} from "react-router-dom";
 
@@ -10,7 +10,7 @@ export default function DefaultEndpoint() {
 
     return (
         <div className="centered-page">
-            <p className="text title underlined"> Conectado a e[P]ers </p>
+            <p className="text title underlined"> Co[n]ectado a EPERS </p>
             <div>
                 <button className="home-btn" onClick={goToLore}> Situacion actual </button>
             </div>
