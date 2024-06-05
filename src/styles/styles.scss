@@ -1,20 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
 :root {
   --window-height: 100%;
-  --window-width: 100%;
 }
 
 .page {
   display: flex;
   flex-direction: column;
-  height: var(--window-height);
-  width: max(var(--window-width), 390px);
+  min-height: var(--window-height);
   background-color: #f1f2f6;
 }
 
 .centered-page {
   display: flex;
-  height: var(--window-height);
+  min-height: var(--window-height);
   background-color: #f1f2f6;
   flex-direction: column;
   justify-content: center;
@@ -23,7 +21,7 @@
 
 .text {
   font-family: 'Ubuntu', sans-serif;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .title {
@@ -41,13 +39,12 @@
 
 .droids-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, 14rem);
-  grid-gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, 17rem);
+  grid-gap: 1rem;
 }
 
 .item {
-  padding: 0.5rem;
-  background-color: #c1afa0;
+  padding: 0.2rem;
   box-shadow: 2px 5px 10px 0 rgba(0, 0, 0, 0.5);
   text-align: center;
 
@@ -59,7 +56,7 @@
 
 .home-btn {
   background-color: white;
-  font-size: 20px;
+  font-size: 18px;
   margin: 0 2px 10px 2px;
   border-radius: 10px;
   border: 2px solid dimgray;
@@ -76,6 +73,7 @@
 .back-btn {
   border-radius: 10px;
   height: 3rem;
+  font-size: 18px;
   background-color: white;
   border: 2px solid dimgray;
 
@@ -91,4 +89,11 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+}
+
+.loading-msg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 24px;
 }

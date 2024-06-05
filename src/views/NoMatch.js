@@ -1,4 +1,4 @@
-import size from "../utils/window-size"
+import size from "../utils/utils"
 import "../styles/styles.scss"
 
 export default function NoMatch() {

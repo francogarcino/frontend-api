@@ -1,9 +1,10 @@
-import size from "../utils/window-size"
+import size from "../utils/utils"
 import "../styles/styles.scss"
 import {useNavigate} from "react-router-dom";
 
 export default function DefaultEndpoint() {
     size()
+
     const navigate = useNavigate();
     const goToLore = () => { navigate("/situacion") }
     const goToBunker = () => { navigate("/bunker") }
