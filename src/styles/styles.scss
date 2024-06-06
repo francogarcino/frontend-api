@@ -19,9 +19,36 @@
   align-items: center;
 }
 
+.columned {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.android {
+  width: 30%;
+  height: 30%;
+  filter: brightness(150%) saturate(50%);
+  transition: filter 0s ease;
+}
+
 .text {
   font-family: 'Ubuntu', sans-serif;
   font-size: 18px;
+}
+
+.lore {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 24px;
+  line-height: 1.5;
+  padding: 0.8rem;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.4);
+
+  transition: .2s;
+  &:hover {
+    background-color: #D7CDC7;
+    transform: scale(1.01);
+  }
 }
 
 .title {
@@ -54,35 +81,31 @@
   }
 }
 
-.home-btn {
-  background-color: white;
+.btn-base {
   font-size: 18px;
-  margin: 0 2px 10px 2px;
   border-radius: 10px;
+  background-color: white;
   border: 2px solid dimgray;
-
-  width: 20rem;
-
   transition: .2s;
+
   &:hover {
     transform: scale(1.1);
     cursor: pointer;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.4);
   }
+}
+
+.home-btn {
+  @extend .btn-base;
+  width: 20rem;
+  margin: 0 2px 10px 2px;
 }
 
 .back-btn {
-  border-radius: 10px;
+  @extend .btn-base;
   height: 3rem;
-  font-size: 18px;
-  background-color: white;
-  border: 2px solid dimgray;
-
-  transition: .2s;
-  &:hover {
-    transform: scale(1.1);
-    cursor: pointer;
-  }
 }
+
 
 .elems-in-row {
   display: flex;
