@@ -14,8 +14,8 @@ export default function Enunciado() {
                 <p className="text title"> 🚀 TP 6 | Un exilio inm[i]nente </p>
                 <button className="back-btn text" onClick={goHome}> Volver al inicio </button>
             </div>
-            <div className="posibly-mobile">
-                <div className="columned margined">
+            <div>
+                <div className="columned">
                     <img className="margined android" src={require("../assets/andriods.jpeg")} alt="Androide por IA"/>
                     { preambulo() }
                 </div>
