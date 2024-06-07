@@ -17,6 +17,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
 .columned {
@@ -68,6 +69,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, 17rem);
   grid-gap: 1rem;
+  justify-content: center;
 }
 
 .item {
@@ -106,7 +108,6 @@
   height: 3rem;
 }
 
-
 .elems-in-row {
   display: flex;
   flex-direction: row;
@@ -119,4 +120,20 @@
   flex-direction: column;
   align-items: center;
   font-size: 24px;
+}
+
+
+@media screen and (max-width: 768px) {
+  .columned {
+    flex-direction: column;
+  }
+
+  .android {
+    width: 100%;
+    height: 100%;
+  }
+
+  .back-btn {
+    height: fit-content;
+  }
 }

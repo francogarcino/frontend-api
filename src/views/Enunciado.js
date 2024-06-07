@@ -14,12 +14,14 @@ export default function Enunciado() {
                 <p className="text title"> 🚀 TP 6 | Un exilio inm[i]nente </p>
                 <button className="back-btn text" onClick={goHome}> Volver al inicio </button>
             </div>
-            <div className="columned margined">
-                <img className="margined android" src={require("../assets/andriods.jpeg")} alt="Androide por IA"/>
-                { preambulo() }
+            <div className="posibly-mobile">
+                <div className="columned margined">
+                    <img className="margined android" src={require("../assets/andriods.jpeg")} alt="Androide por IA"/>
+                    { preambulo() }
+                </div>
+                { conexion() }
+                { revelacion() }
             </div>
-            { conexion() }
-            { revelacion() }
         </div>
     )
 }
@@ -48,7 +50,7 @@ const conexion = () => {
             biomecánica, les transmitió al grupo de desarrolladores su arrepentimiento tras ver cómo sus creaciones
             habían poblado la tierra y llevado a la raza humana hasta su límite; no obstante, en un acto de redención
             con sus últimos suspiros, les brindó a los desarrolladores su plan para la supervivencia humana, denominado
-            como el Éxodo del Progreso Evolutivo Robotizado y Sistemático, mejor conocido bajo el acrónimo E.P.E.R.S.
+            como el Éxodo al Progreso Evolutivo Robotizado y Sistemático, mejor conocido bajo el acrónimo E.P.E.R.S.
         </div>
     )
 }
@@ -58,18 +60,18 @@ const revelacion = () => {
         <div className="margined lore">
             <div className="underlined"> 📄 T2: ESPERANZA </div>
             El plan del antiguo asistente consistía en la evolución de la raza humana mediante la independencia de la
-            consciencia del cuerpo. Un plan que, ante la desesperante situación de los humanos, representaba un nuevo
+            conciencia del cuerpo. Un plan que, ante la desesperante situación de los humanos, representaba un nuevo
             punto de partida. <br></br>
 
-            El plan consistía en transformar la consciencia humana en una serie de datos que se implantarían de manera
+            El plan consistía en transformar la conciencia humana en una serie de datos que se implantarían de manera
             artificial en cuerpos robóticos. Sin embargo, los materiales para estos cuerpos se encontraban en un lugar
             alejado del desolado mundo donde se encontraban las colonias; exactamente a 384.400 km, en unos bunkers
             situados en la superficie lunar. <br></br>
 
-            Para comunicarse con las colonias lunares y cargar la consciencia en los servidores de los bunkers lunares,
+            Para comunicarse con las colonias lunares y cargar la conciencia en los servidores de los bunkers lunares,
             las colonias terrestres deberían levantar una terminal en alguno de los servidores disponibles esparcidos a
             lo largo de las devastadas ciudades, y mediante el uso de un complejo invento del cual no se les reveló su
-            funcionamiento, serializar su consciencia y enviarla al servidor, el cual volcará cada consciencia en un
+            funcionamiento, serializar su conciencia y enviarla al servidor, el cual volcará cada conciencia en un
             armazón metálico. <br></br>
 
             Este es el comienzo de la nueva humanidad...
