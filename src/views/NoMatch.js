@@ -1,8 +1,12 @@
 import size from "../utils/utils"
 import "../styles/styles.scss"
+import {useNavigate} from "react-router-dom";
 
 export default function NoMatch() {
     size()
+
+    const navigate = useNavigate();
+    const goHome = () => { navigate("/") }
 
     return (
         <div className="centered-page">
@@ -14,6 +18,7 @@ export default function NoMatch() {
                 <p className="text" >O quizas solo escribiste mal el path</p>
                 <p className="text" >No lo chequeaste, ¿verdad?</p>
             </div>
+            <div className="home-btn" onClick={goHome}> 🛜 Reestablece tu conexion con el bunker </div>
         </div>
     )
 }

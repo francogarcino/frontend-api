@@ -27,7 +27,7 @@ export default function Bunker() {
     return (
         <div className="page">
             <div className="elems-in-row margined underlined">
-                <div className="text title"> 🧠 Conciencias r[e]gistradas</div>
+                <div className="text title"> 🧠 Consciencias r[e]gistradas</div>
                 <button className="back-btn text" onClick={goHome}> Volver al inicio</button>
             </div>
             <div className="margined btn-container">
