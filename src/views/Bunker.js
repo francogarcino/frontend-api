@@ -13,6 +13,7 @@ export default function Bunker() {
     const [msg, setMsg] = useState("Seleccione la terminal a consultar");
 
     const fetchFrom = (uri) => {
+        setDocs([])
         setMsg(`Recuperando consciencias de ${mapUri(uri)[0]}`)
         api.androids(uri).then((response) => {
             let droids = response.data.map(doc => ({
@@ -79,7 +80,7 @@ export default function Bunker() {
 
 const card = (doc, index) => {
     return (<div key={index} className="item" style={{ backgroundColor: doc.origin[1] }}>
-            <p className="text"> {doc.serial_name} | {doc.origin[0]} </p>
+            <p className="text fixed-test"> {doc.serial_name} | {doc.origin[0]} </p>
             <p className="text"> {doc.request_timestamp} </p>
         </div>
     );

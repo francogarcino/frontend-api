@@ -140,6 +140,12 @@
   }
 }
 
+.fixed-test {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .elems-in-row {
   display: flex;
   flex-direction: row;
