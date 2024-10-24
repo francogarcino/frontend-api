@@ -10,8 +10,8 @@ function App() {
             <BrowserRouter>
                 <Routes>
                     <Route path="/" element={< DefaultEndpoint />} />
-                    <Route exact path="/situacion" element={< Enunciado />}/>
-                    <Route exact path="/bunker" element={< Bunker />}/>
+                    <Route exact path="/verdad" element={< Enunciado />}/>
+                    <Route exact path="/reinos" element={< Bunker />}/>
                     <Route exact path="*" element={< NoMatch />}/>
                 </Routes>
             </BrowserRouter>

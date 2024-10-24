@@ -6,17 +6,17 @@ export default function DefaultEndpoint() {
     size()
 
     const navigate = useNavigate();
-    const goToLore = () => { navigate("/situacion") }
-    const goToBunker = () => { navigate("/bunker") }
+    const goToLore = () => { navigate("/verdad") }
+    const goToBunker = () => { navigate("/reinos") }
 
     return (
         <div className="centered-page">
-            <p className="text title underlined"> Co[n]ectado a EPERS </p>
+            <p className="text title underlined"> La verdad de EPERSGEIST </p>
             <div>
-                <button className="home-btn" onClick={goToLore}> Situacion actual </button>
+                <button className="home-btn" onClick={goToLore}> ➡️ Sigamos a RDJ </button>
             </div>
             <div>
-                <button className="home-btn" onClick={goToBunker}> Conexion con el bunker</button>
+                <button className="home-btn" onClick={goToBunker}> ✨ Explorar los reinos </button>
             </div>
         </div>
     )

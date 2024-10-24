@@ -1,11 +1,11 @@
 import axios from "axios";
 
 const default_value = () => axios.get(`${process.env.REACT_APP_URI_PANCHO}/`);
-const androids = (uri) => axios.get(`${uri}/androides`);
+const spirits = (uri) => axios.get(`${uri}/espiritus`);
 
 const api = {
     def: default_value,
-    androids
+    spirits
 };
 
 export default api;

@@ -13,12 +13,12 @@ export default function NoMatch() {
             <p className="text title underlined"> 🔧 ¿Pe[r]dido...? </p>
             <div>
                 <p className="text" >Ups... </p>
-                <p className="text" >Parece que la conexión con el bunker no funciona</p>
-                <p className="text" >Quizas estan atacando nuestra base</p>
+                <p className="text" >Parece que te perdiste entre mundos</p>
+                <p className="text" >¿Estas seguro que tomaste el portal correcto?</p>
                 <p className="text" >O quizas solo escribiste mal el path</p>
                 <p className="text" >No lo chequeaste, ¿verdad?</p>
             </div>
-            <div className="home-btn" onClick={goHome}> 🛜 Reestablece tu conexion con el bunker </div>
+            <div className="home-btn" onClick={goHome}> 🌀 Retornar al nexo </div>
         </div>
     )
 }
