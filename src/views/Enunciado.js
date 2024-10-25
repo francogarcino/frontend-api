@@ -19,7 +19,7 @@ export default function Enunciado() {
             </div>
             <div>
                 <div className="columned">
-                    <img className="margined android" src={require("../assets/nexo.jpeg")} alt="Nexo"/>
+                    <img className="margined android" src={require("../assets/inferno.jpeg")} alt="Nexo"/>
                     {preambulo()}
                 </div>
                 {conexion()}
@@ -53,19 +53,22 @@ const conexion = () => {
     return (
         <div className="margined lore">
             <div className="underlined"> 🪐 T1: REINOS</div>
-            Avanzamos hacia el portal, deslumbrados por unos instantes al cruzar al otro plano. Fuera lo que fuese aquel
-            lugar, las vistas que se desplegaban ante nosotros eran todo menos comunes. <br/>
+            Avanzamos hacia el portal en lo que fue un viaje del todo menos grato: los breves segundos que nos tomo
+            atravesar el portal se sintieron casí eternos mientras nos sumiamos en una perfecta oscuridad. Multiples
+            voces provenientes de la misma oscuridad nos susurraban penurias y lamentos constantemente en un intento de
+            perturbar nuestra psiquis. <br/>
 
-            Un vasto y desolado plano blanco se extendía sin fin; detrás de nosotros, un portal similar al que habíamos
-            cruzado, pero de proporciones colosales, dominaba el horizonte. <br/>
+            Tras poner un pie fuera de esa oscuridad, un vasto y desolado plano se extendía infinitamente frente a
+            nosotros presentando un mundo enterrado en caos. Un fuerte hedor a azufre nos invadio mientras veiamos los
+            pocos vestigios de este mundo plagado de cenizas, depresión y catastrofe. <br/>
 
-            Diversos cristales de múltiples colores se extendían tanto en la tierra como en el aire de este mundo junto
-            con esferas de energía de la misma variedad. El cielo, sin rastro de oscuridad, brillaba haciendo parecer
-            que la noche era un concepto inexistente mientras galaxias se pintaban en el mismo. <br/>
+            Buscamos a nuestro poseido compañero a nuestro alrededor, esperando encontrar alguna pista de su paradero
+            hasta que uno de nosotros distinguio unas marcas de sangre en el suelo que se extendian hasta la entrada de
+            lo que para nuestros mundanamente acostumbrados ojos parecia ser una cueva. <br/>
 
-            Nuestros ojos recorrieron el paisaje en busca de nuestro compañero hasta que lo encontramos, tendido y
-            malherido en el centro de una serie de circunferencias inscritas en el suelo, con un vórtice en el corazón
-            de las mismas.
+            Tras entrar en esa pequeña cueva, iluminada tenuemente por fragmentos de cristales incrustados en las
+            paredes de los cuales emanaba un liquido oscuro y espeso junto con un denso gas, encontramos a RDJ, tendido
+            contra una piedra, malherido, exhausto y con la conocida ausencia de su brazo izquierdo como siempre.
         </div>
     )
 }
