@@ -10,7 +10,7 @@ export default function Bunker() {
     const goHome = () => { navigate("/") }
 
     const [docs, setDocs] = useState([]);
-    const [msg, setMsg] = useState("Seleccione el reino a explorar");
+    const [msg, setMsg] = useState("Seleccione el circulo a explorar");
 
     const fetchFrom = (uri) => {
         setDocs([])
@@ -21,13 +21,13 @@ export default function Bunker() {
                 origin: mapUri(uri)
             }));
             setDocs(spirits)
-        }).catch(e => console.log(`El reino ${uri} esta fuera de tu comprensión...`));
+        }).catch(e => console.log(`El circulo ${uri} esta fuera de tu comprensión...`));
     }
 
     return (
         <div className="page">
             <div className="elems-in-row margined underlined">
-                <div className="text title"> 🌌 Reinos Arcanos </div>
+                <div className="text title"> 🌌 Circulos del infierno </div>
                 <button className="back-btn text" onClick={goHome}> Retornar al nexo </button>
             </div>
             <div className="margined btn-container">

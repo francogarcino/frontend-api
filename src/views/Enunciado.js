@@ -78,27 +78,32 @@ const revelacion = () => {
         <div className="margined lore">
             <div className="underlined"> 💎 T2: ULTIMA MISIÓN</div>
             Llegamos al auxilio de RDJ, su vida pendiendo de un hilo mientras lo observábamos canalizar su propia
-            energía para revertir sus heridas. Una vez a su lado, nos reveló la naturaleza de aquel paraje. <br/>
+            energía para revertir sus heridas. Una vez a su lado, nos reveló  lo sucedido con su espiritu luego
+            de que nos abandonara <br/>
 
             <div className="blockquote">
-                Los espíritus, tanto ángeles como demonios que han visto... provienen de reinos distintos e infinitos...
+                Ese bastardo... no pense que me atacará así...
             </div>
 
-            Con un movimiento lento, señaló uno de los cristales en la distancia. <br/>
+            Un charco espeso de sangre se presentaba en el suelo bajo nuestro guía, emanando desde su abdomen
+            donde la energía se canalizaba para frenar el caudal de sangre <br/>
 
             <div className="blockquote">
-                —El demonio que me acompañaba... escapó al reino reflejado en ese cristal. Pero ustedes... deben actuar...
+                Escuchen... Para frenar el caos... deben ayudarme...
             </div>
 
-            Aunque éramos incapaces de dominar las artes arcanas que RDJ mencionaba mientras buscaba los remanentes de energía, percibimos claramente que la fuerza vital que poseía era mucho menor que antes. Aun así, lo poco que le quedaba fue suficiente para invocar un pergamino en su mano. <br/>
+            Con sus ultimos suspiros, RDJ nos enconmendo nuestra ultima misión <br/>
 
             <div className="blockquote">
-                —Siete runas... deben encontrarlas... luego regresen... y detengan el caos...
+                Deben ayudarme a recuperar mi brazo... o los fragmentos existentes de este...
             </div>
 
-            Siete orbes de energía aparecieron a su alrededor, cada uno dirigiéndose a distintos cristales cercanos a nuestra posición. No necesitábamos más indicaciones: comprendimos que aquella era nuestra última misión, el último paso para cerrar la caja de Pandora que habíamos abierto. <br/>
+            Nos señaló la salida de la cueva, apuntando directamente a los circulos en el suelo que convergian en una suerte de portal
 
-            Juntos, emprendimos nuestra cruzada...
+            <div className="blockquote">
+                Exploren el circulo que les toque... y recuperenlos enfrentando a los demonios ahí presentes
+            </div>
+
         </div>
     )
 }

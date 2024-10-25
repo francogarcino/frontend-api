@@ -16,7 +16,7 @@ export default function DefaultEndpoint() {
                 <button className="home-btn" onClick={goToLore}> ➡️ Sigamos a RDJ </button>
             </div>
             <div>
-                <button className="home-btn" onClick={goToBunker}> ✨ Explorar los reinos </button>
+                <button className="home-btn" onClick={goToBunker}> ✨ Explorar los circulos </button>
             </div>
         </div>
     )
