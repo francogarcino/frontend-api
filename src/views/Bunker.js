@@ -10,24 +10,25 @@ export default function Bunker() {
     const goHome = () => { navigate("/") }
 
     const [docs, setDocs] = useState([]);
-    const [msg, setMsg] = useState("Seleccione el circulo a explorar");
+    const [msg, setMsg] = useState("Seleccione que dimensión explorar");
 
     const fetchFrom = (uri) => {
         setDocs([])
-        setMsg(`Buscando espiritus de ${mapUri(uri)[0]}`)
-        api.spirits(uri).then((response) => {
-            let spirits = response.data.map(doc => ({
+        setMsg(`Buscando ubicaciones de ${mapUri(uri)[0]}`)
+        api.spots(uri).then((response) => {
+            let places = response.data.map(doc => ({
                 ...doc,
                 origin: mapUri(uri)
             }));
-            setDocs(spirits)
-        }).catch(e => console.log(`El circulo ${uri} esta fuera de tu comprensión...`));
+            setDocs(places)
+            console.log(places);
+        }).catch(e => console.log(`La dimensión ${uri} esta fuera de tu comprensión...`));
     }
 
     return (
         <div className="page">
             <div className="elems-in-row margined underlined">
-                <div className="text title"> 🌌 Circulos del infierno </div>
+                <div className="text title"> 🌌 Dimensiones </div>
                 <button className="back-btn text" onClick={goHome}> Retornar al nexo </button>
             </div>
             <div className="margined btn-container">
@@ -36,32 +37,32 @@ export default function Bunker() {
                         onClick={() => fetchFrom(process.env.REACT_APP_URI_PANCHO)}> EPERS
                 </button>
                 <button className="db-btn"
-                        disabled={!Boolean(process.env.REACT_APP_URI_REDIS || "")}
-                        onClick={() => fetchFrom(process.env.REACT_APP_URI_REDIS)}> TAMOS REDIS
+                        disabled={!Boolean(process.env.REACT_APP_URI_SOBRE || "")}
+                        onClick={() => fetchFrom(process.env.REACT_APP_URI_SOBRE)}> SOBREPERSISTIENDO
                 </button>
                 <button className="db-btn"
-                        disabled={!Boolean(process.env.REACT_APP_URI_GHOST || "")}
-                        onClick={() => fetchFrom(process.env.REACT_APP_URI_GHOST)}> GHOST BUGSTERS
+                        disabled={!Boolean(process.env.REACT_APP_URI_CODIGO || "")}
+                        onClick={() => fetchFrom(process.env.REACT_APP_URI_CODIGO)}> CÓD. CLANDESTINO
                 </button>
                 <button className="db-btn"
-                        disabled={!Boolean(process.env.REACT_APP_URI_MANCOS || "")}
-                        onClick={() => fetchFrom(process.env.REACT_APP_URI_MANCOS)}> MANCOS
+                        disabled={!Boolean(process.env.REACT_APP_URI_HTML || "")}
+                        onClick={() => fetchFrom(process.env.REACT_APP_URI_HTML)}> HTML
                 </button>
                 <button className="db-btn"
-                        disabled={!Boolean(process.env.REACT_APP_URI_ANGELES || "")}
-                        onClick={() => fetchFrom(process.env.REACT_APP_URI_ANGELES)}> ANGELES
+                        disabled={!Boolean(process.env.REACT_APP_URI_FEM || "")}
+                        onClick={() => fetchFrom(process.env.REACT_APP_URI_FEM)}> FEM&ACID
                 </button>
                 <button className="db-btn"
-                        disabled={!Boolean(process.env.REACT_APP_URI_GRADLE || "")}
-                        onClick={() => fetchFrom(process.env.REACT_APP_URI_GRADLE)}> A LO GRADLE
+                        disabled={!Boolean(process.env.REACT_APP_URI_WORLD || "")}
+                        onClick={() => fetchFrom(process.env.REACT_APP_URI_WORLD)}> WORLD OF JAVA
                 </button>
                 <button className="db-btn"
-                        disabled={!Boolean(process.env.REACT_APP_URI_NULL || "")}
-                        onClick={() => fetchFrom(process.env.REACT_APP_URI_NULL)}> NULLPOINTER
+                        disabled={!Boolean(process.env.REACT_APP_URI_INTE || "")}
+                        onClick={() => fetchFrom(process.env.REACT_APP_URI_INTE)}> INTELLIJENTES
                 </button>
                 <button className="db-btn"
-                        disabled={!Boolean(process.env.REACT_APP_URI_STRIKES || "")}
-                        onClick={() => fetchFrom(process.env.REACT_APP_URI_STRIKES)}> STRIKES BACK
+                        disabled={!Boolean(process.env.REACT_APP_URI_BUGS || "")}
+                        onClick={() => fetchFrom(process.env.REACT_APP_URI_BUGS)}> BUG BUSTERS
                 </button>
             </div>
             {
@@ -80,21 +81,21 @@ export default function Bunker() {
 
 const card = (doc, index) => {
     return (<div key={index} className="item" style={{ backgroundColor: doc.origin[1] }}>
-            <p className="text fixed-test"> {doc.name} | {doc.origin[0]} </p>
+            <p className="text fixed-test"> {doc.nombre} | {doc.origin[0]} </p>
             <p className="text"> {doc.found_at} </p>
         </div>
     );
 }
 
-const uriMap = {
+const uriMap = { // beige, gris, verde, azul, purpura, marron, _, rojo
     [process.env.REACT_APP_URI_PANCHO]: ["Pancho-DB", "#c1afa0"],
-    [process.env.REACT_APP_URI_REDIS]: ["Redis-DB", "#575757"],
-    [process.env.REACT_APP_URI_GHOST]: ["Ghost-DB", "#ffae7f"],
-    [process.env.REACT_APP_URI_MANCOS]: ["Mancos-DB", "#0f3f7f"],
-    [process.env.REACT_APP_URI_ANGELES]: ["Angeles-DB", "#d4d4d4"],
-    [process.env.REACT_APP_URI_GRADLE]: ["Gradle-DB", "#0B7D57"],
-    [process.env.REACT_APP_URI_NULL]: ["NPointer-DB", "#8c52ff"],
-    [process.env.REACT_APP_URI_STRIKES]: ["Strikes-DB", "#ff3131"]
+    [process.env.REACT_APP_URI_SOBRE]: ["Sobre-DB", "#d4d4d4"],
+    [process.env.REACT_APP_URI_CODIGO]: ["Código-DB", "#0B7D57"],
+    [process.env.REACT_APP_URI_HTML]: ["HTML-DB", "#0f6fbf"],
+    [process.env.REACT_APP_URI_FEM]: ["Fem&ACID-DB", "#8c52ff"],
+    [process.env.REACT_APP_URI_WORLD]: ["WoJ-DB", "#796353"],
+    [process.env.REACT_APP_URI_INTE]: ["IntelliJentes-DB", "#bc9cb0"],
+    [process.env.REACT_APP_URI_BUGS]: ["Busters-DB", "#ff3131"]
 };
 
 const mapUri = (uri) => {
