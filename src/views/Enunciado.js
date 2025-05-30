@@ -50,10 +50,6 @@ const preambulo = () => {
             Números, coordenadas, nombres que no recuerdo haber conocido... Mi cuerpo se mueve por otra voluntad pese a ser consiente. <br/>
 
             Años pasaron... las voces y la pesada presencia en mi espalda me acompañaron hasta hoy... Tras verlos a ustedes... la voz principal me domino de nuevo... <br/>
-
-            <div className="blockquote">
-                ... Ellos son... nuestras presas...
-            </div>
         </div>
     )
 }
